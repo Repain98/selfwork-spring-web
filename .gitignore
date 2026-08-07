@@ -1,0 +1,22 @@
+# IntelliJ IDEA
+.idea/
+out/
+*.iml
+*.ipr
+*.iws
+
+# Java/Maven
+target/
+
+# Java/Gradle
+.gradle/
+build/
+
+# File di sistema Windows
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Log e file temporanei
+*.log
+*.tmp
