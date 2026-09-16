@@ -3,11 +3,11 @@ package it.aulab.selfworkspringweb.repositories;
 import it.aulab.selfworkspringweb.models.Comment;
 import it.aulab.selfworkspringweb.models.Post;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.ListCrudRepository;
 
 import java.util.List;
 
-public interface CommentRepository extends CrudRepository<Comment, Long> {
+public interface CommentRepository extends ListCrudRepository<Comment, Long> {
     List<Comment> findByEmail(String email);
 
     List<Comment> findByPost(Post post);

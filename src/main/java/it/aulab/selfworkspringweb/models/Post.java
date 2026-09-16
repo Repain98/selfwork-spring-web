@@ -1,5 +1,6 @@
 package it.aulab.selfworkspringweb.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -20,9 +21,11 @@ public class Post {
 
     @ManyToOne
     @JoinColumn(name = "author_id")
+    @JsonIgnoreProperties({"posts"})
     private Author author;
 
     @OneToMany(mappedBy = "post")
+    @JsonIgnoreProperties({"post"})
     private List<Comment> comments = new ArrayList<>();
 
     public Post() {

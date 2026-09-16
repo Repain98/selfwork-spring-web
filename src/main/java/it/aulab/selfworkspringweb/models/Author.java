@@ -1,5 +1,6 @@
 package it.aulab.selfworkspringweb.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class Author {
     private String email;
 
     @OneToMany(mappedBy = "author")
+    @JsonIgnoreProperties({"author"})
     private List<Post> posts = new ArrayList<>();
 
     public Author() {

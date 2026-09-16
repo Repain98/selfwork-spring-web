@@ -2,11 +2,11 @@ package it.aulab.selfworkspringweb.repositories;
 
 import it.aulab.selfworkspringweb.models.Author;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.ListCrudRepository;
 
 import java.util.List;
 
-public interface AuthorRepository extends CrudRepository<Author, Long> {
+public interface AuthorRepository extends ListCrudRepository<Author, Long> {
     List<Author> findByName(String firstName);
 
     List<Author> findBySurname(String lastname);
